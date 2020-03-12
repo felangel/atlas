@@ -601,6 +601,7 @@ class GoogleAtlasProviderSample extends Provider {
       ArgumentCallback<AtlasController> onMapCreated,
       bool showMyLocation,
       bool showMyLocationButton,
+      bool followMyLocation,
       MapType mapType,
       bool showTraffic}) {
     return AtlasTestSample(

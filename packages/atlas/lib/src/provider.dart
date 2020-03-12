@@ -27,6 +27,7 @@ abstract class Provider {
     final ArgumentCallback<AtlasController> onMapCreated,
     final bool showMyLocation,
     final bool showMyLocationButton,
+    final bool followMyLocation,
     final MapType mapType,
     final bool showTraffic,
   });
