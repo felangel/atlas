@@ -66,8 +66,8 @@ class Atlas extends StatelessWidget {
   ///   * [showMyLocation] parameter.
   final bool showMyLocationButton;
 
-/// This option enables the map to update its camera position so that 
-/// the user's current location is always shown in the center of the screen
+  /// This option enables the map to update its camera position so that 
+  /// the user's current location is always shown in the center of the screen
   final bool followMyLocation;
 
   /// Sets the underlying map type to be displayed.
