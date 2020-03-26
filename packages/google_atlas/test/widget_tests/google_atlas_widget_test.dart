@@ -511,7 +511,7 @@ main() {
       final FakePlatformGoogleMap platformGoogleMap =
           fakePlatformViewsController.lastCreatedView;
 
-      expect(platformGoogleMap.cameraPosition.target, expectedPosit
+      expect(platformGoogleMap.cameraPosition.target, expectedPosition);
       expect(platformGoogleMap.myLocationButtonEnabled, false);
     });
 
