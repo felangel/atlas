@@ -31,6 +31,7 @@ class GoogleAtlas extends Provider {
     ArgumentCallback<LatLng> onLongPress,
     ArgumentCallback<LatLng> onLocationChanged,
     ArgumentCallback<AtlasController> onMapCreated,
+    ArgumentCallback<CameraPosition> onCameraPositionChanged,
   }) {
     return GoogleMapsProvider(
       initialCameraPosition: initialCameraPosition,

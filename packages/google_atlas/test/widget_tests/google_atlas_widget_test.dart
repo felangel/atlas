@@ -511,7 +511,7 @@ main() {
       final FakePlatformGoogleMap platformGoogleMap =
           fakePlatformViewsController.lastCreatedView;
 
-      expect(platformGoogleMap.cameraPosition.target, expectedPosition);
+      expect(platformGoogleMap.cameraPosition.target, expectedPosit
       expect(platformGoogleMap.myLocationButtonEnabled, false);
     });
 
@@ -600,6 +600,7 @@ class GoogleAtlasProviderSample extends Provider {
     ArgumentCallback<LatLng> onLongPress,
     ArgumentCallback<AtlasController> onMapCreated,
     ArgumentCallback<LatLng> onLocationChanged,
+    ArgumentCallback<CameraPosition> onCameraPositionChanged,
     bool showMyLocation,
     bool showMyLocationButton,
     MapType mapType,

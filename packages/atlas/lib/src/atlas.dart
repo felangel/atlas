@@ -36,6 +36,10 @@ class Atlas extends StatelessWidget {
   /// `onLocationChanged` callback which receives a position when the user moves
   final ArgumentCallback<LatLng> onLocationChanged;
 
+  /// `onCameraPositionChanged ` gets called when the map's camera position is changed.
+  /// The updated `CameraPosition ` is passed as an argument.
+  final ArgumentCallback<CameraPosition> onCameraPositionChanged;
+
   /// `showMyLocation` determines whether or not the current device location
   /// should be displayed on the map. It will default to false if not specified.
   ///
@@ -95,6 +99,7 @@ class Atlas extends StatelessWidget {
     this.onLongPress,
     this.onMapCreated,
     this.onLocationChanged,
+    this.onCameraPositionChanged,
   })  : assert(initialCameraPosition != null),
         markers = markers ?? Set<Marker>(),
         circles = circles ?? Set<Circle>(),
@@ -122,6 +127,7 @@ class Atlas extends StatelessWidget {
       mapType: mapType,
       showTraffic: showTraffic,
       onMapCreated: onMapCreated,
+      onCameraPositionChanged: onCameraPositionChanged,
     );
   }
 }
