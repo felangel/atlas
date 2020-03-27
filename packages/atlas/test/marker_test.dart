@@ -100,6 +100,44 @@ main() {
       expect(marker.onTap, expectedOnTap);
     });
 
+    test('should have correct properties when no CallOut is provided', () {
+      final expectedId = 'id';
+      final expectedPosition = LatLng(
+        latitude: 37.42796133580664,
+        longitude: -122.085749655962,
+      );
+      final expectedCallOut = null;
+      final marker = Marker(
+        id: expectedId,
+        position: expectedPosition,
+        callOut: expectedCallOut,
+      );
+      expect(marker.id, expectedId);
+      expect(marker.position, expectedPosition);
+      expect(marker.callOut, expectedCallOut);
+    });
+
+    test('should have correct properties when CallOut is provided', () {
+      final expectedId = 'id';
+      final expectedPosition = LatLng(
+        latitude: 37.42796133580664,
+        longitude: -122.085749655962,
+      );
+      final expectedCallOut = CallOut(
+        title: 'CallOut Title',
+        subTitle: 'CallOut subTitle',
+      );
+      final marker = Marker(
+        id: expectedId,
+        position: expectedPosition,
+        callOut: expectedCallOut,
+      );
+      expect(marker.id, expectedId);
+      expect(marker.position, expectedPosition);
+      expect(marker.callOut.title, expectedCallOut.title);
+      expect(marker.callOut.subTitle, expectedCallOut.subTitle);
+    });
+
     test('different instances with same properties should be equal', () {
       final marker1 = Marker(
         id: 'id',
